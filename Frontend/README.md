@@ -1,3 +1,6 @@
+Frontend - React-based (frontend/README.md)
+markdown
+Copy
 # Frontend - Ecommerce Think Academies Assignment
 
 This is the frontend for the Ecommerce Think Academies project, built using React.js. It fetches products from a secure REST API, displays them in a grid, and supports search and lazy loading features.
@@ -17,15 +20,32 @@ This is the frontend for the Ecommerce Think Academies project, built using Reac
    ```bash
    git clone https://github.com/yourusername/Ecommerce_thinkacademies.git
    cd Ecommerce_thinkacademies/frontend
-
 Install the required dependencies:
+
+bash
+Copy
 npm install
-npm run dev
+Start the development server:
+
+bash
+Copy
+npm start
+Open your browser and go to http://localhost:3000 to view the application.
+
 Environment Variables
+Make sure to set the following environment variable for the backend API:
+
+REACT_APP_API_BASE_URL: The base URL of the backend API.
+Example:
+
+bash
+Copy
 REACT_APP_API_BASE_URL=http://localhost:5000
+You can create a .env file in the root of the frontend folder and add the above variable.
 
 Folder Structure
-
+bash
+Copy
 frontend/
 ├── public/                   # Public assets (images, icons, etc.)
 ├── src/                      # Application code
@@ -36,20 +56,24 @@ frontend/
 │   └── api.js                # API call helper methods
 ├── .env                      # Environment variables
 └── package.json              # Project dependencies and scripts
-
 Dependencies
 React
 Axios (for API calls)
 React Router
 React Toastify (for notifications)
 Lodash (for debounce)
+License
+This project is licensed under the MIT License.
 
+yaml
+Copy
 
-# Backend - Ecommerce Think Academies Assignment
+---
 
 ### **Backend - Node.js-based (`backend/README.md`)**
 
-# Backend - Ecommerce Think Academies
+```markdown
+# Backend - Ecommerce Think Academies Assignment
 
 This is the backend for the Ecommerce Think Academies project, built using Node.js and Express. It provides a secure REST API for managing products with JWT authentication and rate limiting.
 
@@ -67,18 +91,25 @@ This is the backend for the Ecommerce Think Academies project, built using Node.
    ```bash
    git clone https://github.com/yourusername/Ecommerce_thinkacademies.git
    cd Ecommerce_thinkacademies/backend
-   
 Install the required dependencies:
-npm install
 
+bash
+Copy
+npm install
 Create a .env file and add the following environment variables:
+
+bash
+Copy
 PORT=5000
 JWT_SECRET=your_jwt_secret_key
 RATE_LIMIT_MAX=100
 RATE_LIMIT_WINDOW_MS=3600000   # 1 hour in milliseconds
+Start the server:
 
-
-Start the server: nodemon server.js
+bash
+Copy
+npm start
+The backend will be running on http://localhost:5000.
 
 Endpoints
 GET /products
@@ -90,6 +121,7 @@ Description: User login to get a JWT token.
 Request Body:
 
 json
+Copy
 {
   "email": "user@example.com",
   "password": "password"
@@ -99,6 +131,7 @@ Response: JWT token for authentication.
 Example response:
 
 json
+Copy
 {
   "success": true,
   "jwtToken": "your-jwt-token"
@@ -107,6 +140,7 @@ POST /products (Admin-only)
 Description: Create a new product (requires authentication).
 Request Body:
 json
+Copy
 {
   "name": "Product Name",
   "price": 10
@@ -117,12 +151,14 @@ Each request to protected routes must include the JWT token in the Authorization
 Example:
 
 makefile
+Copy
 Authorization: Bearer your-jwt-token
 Rate Limiting
 This API implements rate limiting of 100 requests per user per hour.
 If a user exceeds the limit, they will receive a 429 Too Many Requests error.
 Folder Structure
 bash
+Copy
 backend/
 ├── controllers/               # Route handlers (logic for each endpoint)
 │   └── productController.js   # Logic for handling product requests
@@ -146,6 +182,7 @@ License
 This project is licensed under the MIT License.
 
 markdown
+Copy
 
 ---
 
@@ -158,4 +195,6 @@ markdown
    - Explains how to set up the Node.js backend, environment variables, endpoints, and JWT authentication.
    - Details rate limiting and the folder structure for managing controllers, routes, and middleware.
 
-You can copy these `README.md` files and place them in the respective `frontend` and `backend` directorie
+You can copy these `README.md` files and place them in the respective `frontend` and `backend` directories in your GitHub repository. This way, you will have a detailed guide for both the frontend and backend setup.
+
+
