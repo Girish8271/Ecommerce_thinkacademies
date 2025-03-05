@@ -1,6 +1,16 @@
-# React + Vite
+# Frontend - Ecommerce Think Academies assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the Ecommerce Think Academies project, built using React.js. It fetches products from a secure REST API, displays them in a grid, and supports search and lazy loading features.
+
+## Features
+
+- Fetches product data from the API using `GET` requests.
+- Displays products in a responsive grid.
+- Implements search functionality with debounce optimization.
+- Lazy loading of product images to improve performance.
+- JWT-based authentication to ensure only logged-in users can access the product list.
+
+## Installation
 
 Currently, two official plugins are available:
 
